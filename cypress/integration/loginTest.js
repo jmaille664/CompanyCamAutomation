@@ -1,5 +1,10 @@
 // // plugins/index.js required installing dotenv / nodejs
-// require('dotenv').config()
+ require('dotenv').config()
+
+  // const username= process.env.USER
+  // console.log(username);
+  // console.log(process.env)
+  // const password= process.env.PASS
 
 // module.exports = (on, config) => {
 //   // copy needed variables from process.env to config.env
@@ -12,13 +17,13 @@
   describe ("Login", () =>{
       it("logins a user successfully", ()=>{
 
-        // const username= Cypress.env.USER
-        // const password= Cypress.env.PASS
+        // const username= process.env.USER
+        // const password= process.env.PASS
 
         //go to login page
         cy.visit("https://app.companycam.com/users/sign_in");
         //go to email and enter email
-        cy.get('input[name="user[email_address]"]').type("testcompany04@test.com");
+        cy.get('input[name="user[email_address]"]').type(username);
         //go to password and enter email
         cy.get('input[name="user[password]"]').type("Welcome123!");
         //click on Sign In 
