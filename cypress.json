@@ -1,5 +1,9 @@
 {
-
+"baseURL":"https://companycam.com/",
+"env":{
+    "email":"testcompany04@test.com",
+    "password":"Welcome123!"
+}
     
     }
 
