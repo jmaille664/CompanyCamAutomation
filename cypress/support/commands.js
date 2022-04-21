@@ -47,7 +47,7 @@ Cypress.Commands.add('restoreLocalStorage', ()=>{
 const email = Cypress.env('email');
 const password= Cypress.env('password');
 
-
+//Login command
 Cypress.Commands.add('login', ()=>{
     //go to login page
     cy.visit("https://app.companycam.com/users/sign_in");
@@ -58,3 +58,8 @@ Cypress.Commands.add('login', ()=>{
     //click on Sign In 
     cy.get('input[name="commit"]').click();
 });
+
+//Logout command
+Cypress.Commands.add('logout', ()=>{
+    cy.get('a[href*="/signout"]').click({force: true});
+})

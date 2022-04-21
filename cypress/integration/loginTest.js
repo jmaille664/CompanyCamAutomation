@@ -21,5 +21,9 @@
         // //click on Sign In 
         // cy.get('input[name="commit"]').click()
       });
+
+      it("logs a user out", ()=>{
+        cy.get('a[href*="/signout"]').click({force: true});
+      })
   });
 

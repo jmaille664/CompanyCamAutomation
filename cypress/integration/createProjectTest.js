@@ -19,7 +19,7 @@ describe ("Create Project", () =>{
         //Click on search google address or name and enter zip code
         cy.get(('input[name="project_address"]')).type("05401").click({force: true});
         //find the pac-matched class and click on the first item 
-        cy.contains('span[class="pac-matched"]', '05401').click()
+        cy.contains('span[class="pac-matched"]', '05401').click({force: true})
     });
 
     it("Enters project address to create a project", ()=>{
@@ -30,5 +30,9 @@ describe ("Create Project", () =>{
         cy.xpath('//*[@id="main"]/div[3]/div/div/div[2]/div/form').submit();
     })
 
+    it("Logs user out", ()=>{
+        //Click on username
+        cy.logout()
+    })
     
 });
